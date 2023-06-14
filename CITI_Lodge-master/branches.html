@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="branches.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Branches</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  
+
+<style>
+  /* Starts of the Branches */
+.main{
+  display: grid;
+grid-template-columns: auto auto auto;
+margin-top: 50px;
+margin-bottom: 30px;
+}
+.container{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+.container h1 {
+ text-transform: capitalize; 
+}
+.frame{
+  height: auto;
+  width: auto;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 15px 10px #7fc142;
+  /* box-shadow: 5px 10px 20px red inset; */
+  position: relative;
+}
+.picture{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350px;
+  width: 400px;
+}
+#first_logde{
+  background-image: url("./images/232346955.jpg");
+}
+#second_logde{
+  background-image: url("./images/second.jpg");
+  
+}
+#third_logde{
+  background-image: url("./images/third.jpg");
+}
+.texts{
+  padding-left: 20px;
+  color: whitesmoke;
+}
+.texts h2{
+   background: linear-gradient(30deg, #00dbde,#fc00ff, #fdfdfd);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+.texts button h5{
+  cursor: pointer;
+}
+.texts button h5:hover,
+.texts button h5:focus{
+  color: green;
+  display: block
+}
+.dropbtn{
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  color: whitesmoke;
+  cursor: pointer;
+  border: none;
+}
+.dropup{
+  position: relative;
+  display: inline-block;
+}
+.dropup-content{
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* color: whitesmoke; */
+  min-width:160px;
+  bottom: 50px;
+  box-shadow: 15px 10px #7fc142;
+  z-index: 1;
+}
+.dropup-content span{
+ color: whitesmoke; 
+ padding: 12px 15px;
+ display: block;
+ border-bottom: 2px solid white;
+}
+/* .dropup-content span:hover{
+  background-color: yellow;
+} */
+.dropup:hover .dropup-content{
+  display: block;
+}
+/* .dropup:hover .dropbtn{
+  background-color: purple;
+} */
+.location a, .contact_us a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.location a:hover, .location:focus{
+ color:orange;
+ font-size: 20px;
+  font-weight: lighter;
+  transition: all .2s ease-in-out;
+}
+.contact_us a:hover,
+.contact_us a:focus{
+  background: linear-gradient(#eb3349,#f45c43, #00dbde );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: lighter;
+  transition: all .2s ease-in-out;
+ 
+}
+.read{
+  width: 360px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: whitesmoke;
+}
+.read h5{
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.read p{
+  line-height: 1.4;
+  text-align: justify;
+}
+.check {
+  display: none;
+}
+.inner_text{
+  display: none;
+  transition: all 0.5s linear;
+}
+.read label{
+  display: inline-block;
+  margin-top: 15px;
+  color:red;
+}
+.read label:hover{
+  cursor: pointer;
+  color: whitesmoke;
+  border: 2px solid green;
+}
+.check:checked ~ .inner_text{
+  display: block;
+}
+.check:checked ~ label{
+  visibility: hidden;
+}
+.check:checked ~ label::after{
+  visibility: visible;
+  content: 'Show Less';
+  display: block;
+  border: 2px solid green;
+  padding-left: 2px;
+}
+
+@media screen and ( width <= 1024px){
+  .main{
+      display: grid;
+      grid-template-columns: auto;
+      /* width: 20em;
+      padding: 20px;
+      margin: 20px; */
+  }
+  .container{
+      padding: 20px;
+      margin: 20px;
+  }
+}
+
+/* Ends of the branches */
+
+button {
+      	width: auto;
+      	padding: 10px;
+      	border: none;
+      	border-radius: 5px;
+      	font-size: 12px;
+      	font-weight: 700;
+      	color: #fff;
+      	cursor: pointer;
+    }
+</style>
+    
+</head>
+<body>
+    <header>
+        <div class="content flex_space">
+          <div class="logo" style="margin-top: -15px;">
+            <!-- <img src="images/logogo.jpeg" alt=""> -->
+        <img src="images/Logo (2).png" alt="Citi_Lodge" width="100px" height="100px">
+          </div>
+          <div class="navlinks">
+            <ul id="menulist">
+              <li> <a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+            </ul>
+            <span class="fa fa-bars" onclick="menutoggle()"></span>
+          </div>
+        </div>
+      </header>
+    <br><br>
+      <header>
+        <div class="content flex_space" style="background: #7fc142;">
+          <!-- <div class="logo">
+            <img src="images/logogo.jpeg" alt="">
+          </div> -->
+          <div class="navlinks">
+            <ul class="menulist">
+              <li><a href="home.html">home</a> </li>
+              <li><a href="contact.html">about us</a> </li>
+              <li><a href="faqs.html">faqs</a> </li>
+              <li><a href="prices.html">Pricing</a> </li>
+              <li><a href="branches.html">branches</a> </li>
+              <li><a href="services.html">services</a> </li>
+              <li><a href="careers.html">careers</a> </li>
+              <!-- <li> <button class="primary-btn">BOOK NOW</button> </li> -->
+            </ul>
+            <span class="fa fa-bars" onclick="menutoggle()"></span>
+          </div>
+        </div>
+      </header>
+    
+    
+      <script>
+        var menulist = document.getElementById('menulist');
+        menulist.style.maxHeight = "0px";
+    
+        function menutoggle() {
+          if (menulist.style.maxHeight == "0px") {
+            menulist.style.maxHeight = "100vh";
+          } else {
+            menulist.style.maxHeight = "0px";
+          }
+        }
+      </script>
+    <div class="heading">
+      <div class="container">
+      <h1 style="margin-top: 14%;">BRANCHES</h1>
+      <h2>Our Branches</h2>
+     </div>
+    </div>
+
+<div class="main">
+
+   <div class="container"> 
+        <div class="frame">
+            <div class="picture" id="first_logde"></div>
+            <div class="texts">
+                <h2>GP, Sandton City</h2>                
+                <div class="dropup">
+                    <button class="dropbtn"><h5>Trading Hours
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                          </svg>
+                    </h5></button>
+                    <div class="dropup-content">
+                        <span>Monday - Friday 08am - 08pm</span>
+                        <span>Saturday - Sunday 08am - 03pm</span>
+                        <span>Public Holidays 08am -05pm</span>
+                    </div>
+                </div>
+                 <br>
+                 <div class="location">               
+                        <a href="https://www.google.com/maps?hl=en-GB&gl=ZA&um=1&ie=UTF-8&fb=1&sa=X&geocode=KakBNXa6c5UeMQ0LC8hpJUgN&daddr=Rivonia+River+Lodge,+2+11th+Ave,+Edenburg,+Sandton,+2128" target="_parent">
+                            <address>
+                                <i class="fa fa-map-marker"></i>
+                                2 11th Avenue,<br>
+                                Edenburg,<br>
+                                Rivonia,<br>
+                                2052 Johannesburg<br>
+                                South Africa<br>
+                            </address>
+                        </a>
+            </div>
+            <div class="contact_us">
+                <h3>Contact Us </h3>
+                <h5>Click to call us On</h5>
+                <a href="tel:+27718197801"><i class="uil uil-phone"> </i>+27 718 197 801</a>
+                <h5>Email us On</h5>
+                <a href="mailto:ourlodge@1.ac.za"><i class="fa fa-envelope"> </i> ourlodge@sandton.ac.za</a>
+            </div>
+                <!-- our service here -->
+                <div class="read">
+                    <input type="checkbox" class="check" id="check1">
+                    <h5>Our Service</h5>
+                   <p>Citi Lodge has a number of locations dedicated to providing you with comfort at a level that is appropriate for you. </p>
+                     <div class="inner_text">
+                        Citi Lodge also provides conferencing rooms for business purposes, as well as large halls for hosting weddings, birthday parties, and other events to meet the needs and desires of customers.
+                     </div>
+                     <label for="check1">Read More &rarr;</label>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+   <div class="container"> 
+        <div class="frame">
+            <div class="picture" id="second_logde"></div>
+            <div class="texts">
+                <h2>GP, Braamfontein</h2>                
+                <div class="dropup">
+                    <button class="dropbtn"><h5>Trading Hours
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                          </svg>
+                    </h5></button>
+                    <div class="dropup-content">
+                        <span>Monday - Friday 08am - 08pm</span>
+                        <span>Saturday - Sunday 08am - 03pm</span>
+                        <span>Public Holidays 08am -05pm</span>
+                    </div>
+                </div>
+                 <br>
+                 <div class="location">               
+                        <a href="https://www.google.com/maps/dir/-26.0674777,28.1005628/19+Ameshoff+Street+13th+Floor+CapaCiTi+Hollard+Building+Braamfontein/@-26.1259961,28.0019485,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1e950c1a3dba1ca5:0xb769ba64b87b6a44!2m2!1d28.0372582!2d-26.1906379" target="_parent">
+                            <address>
+                                <i class="fa fa-map-marker"></i>
+                                19 Ameshoff Street <br>
+                                13th Floor CapaCiTi<br>
+                                Hollard Building<br>
+                                Braamfontein<br>
+                                South Africa<br>
+                            </address>
+                        </a>
+            </div>
+            <div class="contact_us">
+                <h3>Contact Us </h3>
+                <h5>Click to call us On</h5>
+                <a href="tel:+27718197802"><i class="uil uil-phone"> </i>+27 718 197 802</a>
+                <h5>Email us On</h5>
+                <a href="mailto:ourlodge@1.ac.za"><i class="fa fa-envelope"> </i> ourlodge@braamfontein.ac.za</a>
+            </div>
+                <!-- our service here -->
+                <div class="read">
+                    <input type="checkbox" class="check" id="check2">
+                    <h5>Our Service</h5>
+                   <p>Citi Lodge has a number of locations dedicated to providing you with comfort at a level that is appropriate for you. </p>
+                     <div class="inner_text">
+                        Citi Lodge also provides conferencing rooms for business purposes, as well as large halls for hosting weddings, birthday parties, and other events to meet the needs and desires of customers.
+                     </div>
+                     <label for="check2">Read More &rarr;</label>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+   <div class="container"> 
+        <div class="frame">
+            <div class="picture" id="third_logde"></div>
+            <div class="texts">
+                <h2>CT, Stellenbosh</h2>                
+                <div class="dropup">
+                    <button class="dropbtn"><h5>Trading Hours
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                          </svg>
+                    </h5></button>
+                    <div class="dropup-content">
+                        <span>Monday - Friday 08am - 08pm</span>
+                        <span>Saturday - Sunday 08am - 03pm</span>
+                        <span>Public Holidays 08am -05pm</span>
+                    </div>
+                </div>
+                 <br>
+                 <div class="location">               
+                        <a href="https://www.google.com/maps/dir//The+Stellenbosch+Hotel,+Corner+of+Drop+%26,+Andringa+St,+Stellenbosch,+7600/@-33.9383218,18.7914104,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1dcdb25bfedd1d87:0xb90aa498bf4587dc!2m2!1d18.8614505!2d-33.9383416?hl=en-GB" target="_parent">
+                            <address>
+                                <i class="fa fa-map-marker"></i>
+                                33 Church Street,<br>
+                                Stellenbosch,<br>
+                                7600<br>
+                                South Africa<br>
+                            </address>
+                        </a>
+            </div>
+            <div class="contact_us">
+                <h3>Contact Us </h3>
+                <h5>Click to call us On</h5>
+                <a href="tel:+27718197803"><i class="uil uil-phone"> </i>+27 718 197 803</a>
+                <h5>Email us On</h5>
+                <a href="mailto:ourlodge@1.ac.za"><i class="fa fa-envelope"> </i> ourlodge@stellenbosh.ac.za</a>
+            </div>
+                <!-- our service here -->
+                <div class="read">
+                    <input type="checkbox" class="check" id="check3">
+                    <h5>Our Service</h5>
+                   <p>Citi Lodge has a number of locations dedicated to providing you with comfort at a level that is appropriate for you..</p>
+                     <div class="inner_text">
+                        Citi Lodge also provides conferencing rooms for business purposes, as well as large halls for hosting weddings, birthday parties, and other events to meet the needs and desires of customers.
+                     </div>
+                     <label for="check3">Read More &rarr;</label>
+                </div>
+
+            </div>
+        </div>
+    </div> 
+
+
+
+    
+</div> 
+
+
+<footer>
+    <div class="container grid">
+      <div class="box">
+        <h2>Citi Lodge</h2>
+        <!-- <img src="images/logo-2.png" alt=""> -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+          aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <div class="icon">
+          <i class="fa fa-facebook-f"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-youtube"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Links</h2>
+        <ul>
+          <li>Company History</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet constur adipisicing elit sed do eiusmtem por incid.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>1201 park street, Avenue, Melrose, Parkhurst. </label> <br>
+        <i class="fa fa-phone"></i>
+        <label>[88] 657 524 332</label> <br>
+        <i class="fa fa-envelope"></i>
+        <label>info@citilodge.com</label> <br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2023 #Codebreakers.</p>
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>

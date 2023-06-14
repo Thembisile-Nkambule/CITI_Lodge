@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<!-- Template by quackit.com -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<title>
+		Citi_Lodge Careers
+	</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+	  referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+	  crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<style type="text/css">
+		/* Layout */
+	body {
+		min-width: 630px;
+		background: white;
+	}
+
+	#container {
+		padding-left: 200px;
+		padding-right: 190px;
+	}
+		
+	#container .column {
+		position: relative;
+		float: left;
+	}
+		
+	#center {
+		padding: 10px 20px;
+		width: 90%;
+	}
+		
+	#left {
+		width: 190px;
+		padding: 0 10px;
+		right: 240px;
+		margin-left: -100%;
+	}
+		
+	#right {
+		width: 190px;
+		padding: 0px 10px;
+		margin-right: -100%;
+	}
+		
+	#footer {
+		clear: both;
+	}
+		
+		/* IE hack */
+	* html #left {
+		left: 150px;
+	}
+
+		/* Make the columns the same height as each other */
+	#container {
+		overflow: hidden;
+	}
+
+	#container .column {
+		padding-bottom: 1001em;
+		margin-bottom: -1000em;
+	}
+
+	/* Fix for the footer */
+	* html body {
+		overflow: hidden;
+	}
+		
+	* html #footer-wrapper {
+		float: left;
+		position: relative;
+		width: auto;
+		padding-bottom: auto;
+		margin-bottom: auto;
+		background: #fff;
+	}
+	
+	/*--------header---------*/
+/* .flex_space */
+header {
+  height: 10vh;
+  line-height: 10vh;
+  padding: 20px 20px;
+}
+
+header img {
+  margin: 20px 0;
+}
+
+header ul {
+  display: inline-block;
+}
+
+header ul li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+header ul li a {
+  color: #000;
+  margin: 10px 10px;
+  transition: 0.5s;
+}
+
+header ul li a:hover {
+	color: lightgreen;
+}
+
+header i {
+  margin: 10px 20px;
+}
+
+header button {
+  padding: 13px 40px;
+}
+
+header .navlinks span {
+  display: none;
+}
+
+/* TODO centering the items */
+.menulist{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width:768px) {
+  header ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #009f7f;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    text-align: center;
+    z-index: 9;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  header ul li a {
+    color: white;
+  }
+
+  header i {
+    color: white;
+  }
+
+  header .navlinks span {
+    color: black;
+    display: block;
+    cursor: pointer;
+    line-height: 10vh;
+    font-size: 25px;
+  }
+}
+/*--------header---------*/
+
+	/*--------footer---------*/
+footer {
+  background: #282834;
+  color: #b6b7b9;
+  padding: 10% 0 5% 0;
+}
+
+footer .grid {
+  grid-template-columns: 6fr 3fr 3fr;
+}
+
+footer p {
+  color: #b6b7b9;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+footer .icon i {
+  margin: 20px 20px 20px 0;
+  color: #b6b7b9;
+}
+
+footer h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer li {
+  margin-bottom: 20px;
+}
+
+footer i {
+  color: #7fc142;
+  margin: 20px 0;
+  margin-right: 20px;
+}
+
+footer label {
+  margin: 20px 0;
+}
+
+.legal {
+  padding: 15px 0;
+  background: #282834;
+  color: #b6b7b9;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*--------footer---------*/
+@media only screen and (max-width:768px) {
+  .home {
+    color: #fff;
+    height: 50vh;
+  }
+
+  .home img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .book h1 {
+    margin-bottom: 20px;
+  }
+
+  .container.flex,
+  .book .flex_space {
+    flex-direction: column;
+  }
+
+  .book .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .counter .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owl-carousel .owl-nav .owl-prev {
+    left: 80%;
+  }
+
+  .gallery .owl-nav .owl-prev {
+    left: 75%;
+  }
+
+  .rooms .owl-nav .owl-prev,
+  .rooms .owl-nav .owl-next {
+    top: -30%;
+  }
+
+  .gallery .owl-nav .owl-prev,
+  .gallery .owl-nav .owl-next {
+    top: -80%;
+  }
+
+  .services .flex_space {
+    flex-direction: column;
+  }
+
+  .Customer {
+    height: 60vh;
+  }
+
+  .Customer .container {
+    max-width: 80%;
+  }
+
+  .owl-carousel2 .owl-dots {
+    bottom: 0;
+    left: 44.5%;
+  }
+
+  footer .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+		/* Aesthetics */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family:Sans-serif;
+		line-height: 1.5em;
+	}
+		
+	p {
+		color: #555;
+	}
+
+	#header, #footer {
+		font-size: large;
+		/* padding: 0.3em; */
+	}
+
+	#left {
+		background: #fff;
+	}
+		
+	#right {
+		background: #fff;
+	}
+
+	#center {
+		background: #fff;
+	}
+
+	#container .column {
+		padding-top: 1em;
+	}
+
+    /* Holder for the careers */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+		
+    }
+    .card {
+        flex: 0 0 200px;
+        margin: 10px 10px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+		background: #EFFAFD;
+    } 
+    .card img {
+        max-width: 200px;
+		height: 150px;
+    }
+    .card .text {
+        padding: 0 20px 20px;
+    }
+
+	/* Search bar */
+	input[type="search"] {
+  		border: none;
+  		
+  		border-radius: 5px 5px 5px 5px;
+		background: skyblue;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 0.35em 0.75em;
+		border: none;
+		font-size: 1.1em;
+		text-decoration: none;
+		line-height: normal;
+		max-height: 2em;
+  
+  		flex: 2 0 250px;
+	}
+
+	input[type="search"]:focus {
+  		background: rgb(212, 240, 252);
+  		color: black;
+  		letter-spacing: 0em;
+  		transition: background 400ms ease-in-out;
+  		outline: none;
+	}
+
+	.buttonsearch {
+  		flex: 2 0 80px;
+  
+  		max-height: 2em;
+  		font-size: 1.1em;
+  		letter-spacing: .2em;
+  		text-transform: uppercase;
+  		border-radius: 5px 5px 5px 5px;
+		background: rgb(213, 239, 255);
+  		color: black;
+  		border: none;
+  		padding: 0.35em 0.75em;
+  		cursor: pointer;
+	}
+
+	.buttonsearch:hover {
+  		background: skyblue;
+	}
+
+	@media (max-width: 450px) {
+  		body {
+    		width: 100%;
+  		}
+  
+  		html, body {
+    		margin: 0;
+    		padding: 0;
+  		}
+	}
+
+	/* Form design */
+html, body {
+    min-height: 100%;
+}
+body, div, form, input, select, textarea, label { 
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+}
+
+legend {
+    padding: 10px;      
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-color: #006622;
+}
+textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+    }
+.testbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    padding: 20px;
+}
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 8px #006622; 
+}
+input, select, textarea {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+input {
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+input[type="date"] {
+    padding: 4px 5px;
+}
+textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+}
+.item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+    color:  #006622;
+}
+.item input:hover, .item select:hover, .item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0  #006622;
+    color: #006622;
+	cursor: pointer;
+}
+.item {
+    position: relative;
+    margin: 10px 0;
+}
+.item span {
+    color: red;
+}
+.item i {
+    right: 1%;
+    top: 30px;
+    z-index: 1;
+}
+.columns {
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.columns div {
+    width:48%;
+    }
+.question span {
+    margin-left: 30px;
+}
+.question-answer label {
+    display: block;
+}
+.flax {
+    display:flex;
+    justify-content:space-around;
+}
+.btn-block {
+    margin-top: 10px;
+    text-align: center;
+    }
+button:hover {
+    background:  #00b33c;
+}
+@media (min-width: 568px) {
+    .name-item, .city-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .name-item input, .name-item div {
+        width: calc(50% - 20px);
+    }
+    .name-item div input {
+        width:97%;}
+    .name-item div label {
+        display:block;
+        padding-bottom:5px;
+    }
+}
+
+@media (max-width: 450px) {
+  		body {
+    		width: 100%;
+  		}
+  
+  		html, body {
+    		margin: 0;
+    		padding: 0;
+  		}
+	}
+
+/* Selecting job preference */
+	  select {
+      width: 100%;
+      padding: 7px 0;
+      background: transparent;
+      }
+
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color: #1c87c9;
+      }
+
+      .item input:hover, .item select:hover {
+      	border: 1px solid transparent;
+      	box-shadow: 0 0 6px 0 #1c87c9;
+      	color: #1c87c9;
+      }
+
+    .item {
+      	position: relative;
+      	margin: 10px 0;
+	  	width: 190px;
+      }
+
+	input[name="file"] {
+  		width: 100%;
+	  }
+
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+
+	.btn-block {
+      	margin-top: 10px;
+      	text-align: center;
+    }
+
+    button {
+      	width: auto;
+      	padding: 10px;
+      	border: none;
+      	border-radius: 5px; 
+      	background: #1c87c9;
+      	font-size: 16px;
+      	font-weight: 700;
+      	color: #fff;
+      	cursor: pointer;
+    }
+
+	button:hover {
+      	background: #003150;
+		cursor: pointer;
+    }
+
+	@media (min-width: 568px) {
+      	.name-item, .contact-item, .position-item {
+      		display: flex;
+      		flex-wrap: wrap;
+      		justify-content: space-between;
+    }
+		
+      	.name-item input {
+      		width: calc(100% - 25px);
+    }
+      	.contact-item .item, .position-item .item {
+      		width: calc(50% - 8px);
+    }
+      	.contact-item input, .position-item input {
+      		width: calc(100% - 12px);
+    }
+      	.position-item select {
+    		width: 100%;
+    }
+  }
+
+</style>
+<body>
+
+	<header>
+		<div class="content flex_space">
+		  <div class="logo" style="text-align: left;">
+			<img src="images/Logo (2).png" alt="Citi_Lodge" width="100px" height="100px">
+		  </div>
+		  <div class="navlinks">
+			<ul id="menulist">
+			  <li> <a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+			</ul>
+			<span class="fa fa-bars" onclick="menutoggle()"></span>
+		  </div>
+		</div>
+	  </header>
+	<br><br>
+	  <header>
+		<div class="content flex_space" style="background: #7fc142; padding: 20px 20px;">
+		  <div class="navlinks">
+			<ul class="menulist">
+			  <li><a href="home.html">home</a> </li>
+			  <li><a href="contact.html">about us</a> </li>
+              <li><a href="faqs.html">faqs</a> </li>
+			  <li><a href="prices.html">Pricing</a> </li>
+			  <li><a href="branches.html">branches</a> </li>
+			  <li><a href="services.html">services</a> </li>
+			</ul>
+			<span class="fa fa-bars" onclick="menutoggle()"></span>
+		  </div>
+		</div>
+	  </header>
+
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+  <div class="heading">
+    <div class="container">
+    <h1 style="margin-top: 16%;">Careers</h1>
+    <h2>Our careers</h2>
+   </div>
+  </div>
+
+	<div id="container">
+		
+		<main id="center" class="column">
+				
+			<!-- <div>
+				<br/><h1 style="color: #000; font-size: 50px;">Careers</h1><br/>
+			</div> -->
+				<div class="searchform">
+					<form style="display: flex; flex-wrap: wrap; width: 100%; margin: 20px 0px;">
+					  <input type="search" name="search" placeholder="Search career" width="80px">
+					  <button type="submit" class="buttonsearch" style="background-color: gray; margin-left: 10px;">Search</button> 
+					</form>
+				</div><br/>
+
+                <main class="cards" style="margin: 40px 40px;">
+                    <article class="card">
+                      <img src="images/Head Chef.jfif" alt="Sample photo" class="pics">
+                      <div class="text">
+                        <h3>Head Chief</h3>
+                        <p>The head chef remains at the top of the hierarchy in restaurant kitchens without an executive chef. Like an executive chef, this person controls all aspects of the kitchen. </p>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img src="images/Operations manager.jfif" alt="Sample photo" class="pics">
+                      <div class="text">
+                        <h3>Operations manager</h3>
+                        <p>In general, the role of an operations manager is to manage all activities involved in producing the goods and/or services of a business.</p>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img src="images/Hotel Manager.jfif" alt="Sample photo" class="pics">
+                      <div class="text">
+                        <h3>Lodge Manager</h3>
+                        <p>A hotel manager oversees all of a hotel's daily operations, from staffing to coordinating fresh-cut flowers for the lobby.</p>
+                      </div>
+                    </article>
+                    <article class="card">
+                      <img src="images/Receptionist.jfif" alt="Sample photo" class="pics">
+                      <div class="text">
+                        <h3>Receptionist</h3>
+                        <p>Receptionists greet visitors, answer phone calls, and run errands while maintaining professional composure throughout interactions with customers or potential clients.</p>
+                      </div>
+                  </article>	
+				  <article class="card">
+					<img src="images/Office manager.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>Office manager</h3>
+					  <p>The office manager oversees operations within the office, and this means keeping things organized.This can include managing and assisting cleaning staff after meetings to ensure the space stays clean.</p>
+					</div>
+				</article>	
+				<article class="card">
+					<img src="images/General manager.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>General Manager</h3>
+					  <p>A General Manager is responsible for improving efficiency and increasing departmental profits while managing the company's overall operations.</p>
+					</div>
+				</article>	
+				<article class="card">
+					<img src="images/Security Manager.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>Security manager</h3>
+					  <p>Security managers oversee asset protection for businesses and companies, from the protection of people and staff to the prevention of theft and inventory loss. </p>
+					</div>
+				</article>	
+				<article class="card">
+					<img src="images/Room Attendent.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>Room attendent</h3>
+					  <p>A room attendant works as part of the housekeeping service team at a hotel. Their job duties involve cleaning and sanitizing rooms, hallways, stairways, and guest areas</p>
+					</div>
+				</article>	
+				<article class="card">
+					<img src="images/Head Housekeeper.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>Head housekeeper</h3>
+					  <p>A housekeeping manager, or head housekeeper, has overall responsibility for cleaning rooms, laundering bed linen and maintaining furnishings and other equipment in hotels, residential homes, hospitals and student accommodation.</p>
+					</div>
+				</article>	
+				<article class="card">
+					<img src="images/Spa Manager.jfif" alt="Sample photo" class="pics">
+					<div class="text">
+					  <h3>Spa Manager</h3>
+					  <p>A Spa Manager oversees a spa facility and spa treatments. Spa Manager responsibilities include overseeing spa operations, ensuring outstanding guest service, and directing spa staff.</p>
+					</div>
+				</article>								
+		</main>
+
+		<div class="testbox">
+			<form>
+			  <fieldset>
+				<legend>Apply today</legend>
+				<div class="columns">
+				  <div class="item">
+					<label for="fname">Full Name<span>*</span></label>
+					<input id="fname" type="text" name="fname" />
+				  </div>
+				  <div class="item">
+					<label for="eaddress">Email Address<span>*</span></label>
+					<input id="eaddress" type="text"   name="eaddress" />
+				  </div>
+				  <div class="item">
+					<label for="address">Address<span>*</span></label>
+					<input id="address" type="text"   name="address" />
+				  </div>
+				  <div class="item">
+					<label for="zip">Zip Code<span>*</span></label>
+					<input id="zip" type="text"   name="zip" required/>
+				  </div>
+				  <div class="item">
+					<label for="city">City<span>*</span></label>
+					<input id="city" type="text"   name="city" />
+				  </div>
+				  <div class="item">
+					<label for="state">Province<span>*</span></label>
+					<input id="state" type="text"   name="state" />
+				  </div>
+				  <div class="item">
+					<p>Choose position</p>
+						<select style="width: auto;">
+							<option value="20" selected></option>
+							<option value="21">Head Chief</option>
+							<option value="22">Spa Manager</option>
+							<option value="23">Head housekeeper</option>
+							<option value="24">Room attendent</option>
+							<option value="25">Security manager</option>
+							<option value="26">General Manager</option>
+							<option value="27">Office manager</option>
+							<option value="27">Receptionist</option>
+							<option value="27">Lodge Manager</option>
+							<option value="27">Operations Manager</option>
+						</select>
+					</div> 
+				  <div class="item">
+					<label for="phone">Phone<span>*</span></label>
+					<input id="phone" type="tel"   name="phone" />
+				  </div>
+
+				  <div class="item">
+					<p>Submit your resume by attaching a file (pdf or docx):</p>
+					<input type="file" name="file" accept="file/*">
+				  </div>
+			  </fieldset>
+			  		
+				<div class="btn-block">
+					<button type="submit" href="/">Submit</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- Left column (Left side of the website) -->
+		<div id="left" class="column">
+			
+		</div>
+
+		<!-- right column (Right side of the website) -->
+		<div id="right" class="column">
+		  	
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<footer>
+		<div class="container grid">
+		  <div class="box">
+			<h2>Citi Lodge</h2>
+			<p><h3>Logde Rules</h3>
+				<ul>
+				  <li>Look at the stars</li>
+				  <li>Make memories</li>
+				  <li>Take long walks</li>
+				  <li>Watch the sunrise</li>
+				  <li>Relax and unwind</li>
+				  <li>But most importantly rememebr to enjoy your stay.</li>
+				</ul>
+			  </p>
+	
+			<div class="icon">
+			  <i class="fa fa-facebook-f"></i>
+			  <i class="fa fa-instagram"></i>
+			  <i class="fa fa-twitter"></i>
+			  <i class="fa fa-youtube"></i>
+			</div>
+		  </div>
+	
+		  <div class="box">
+			<h2>Links</h2>
+			<ul>
+			  <li>Company History</li>
+			  <li>About Us</li>
+			  <li>Contact Us</li>
+			  <li>Services</li>
+			  <li>Privacy Policy</li>
+			</ul>
+		  </div>
+	
+		  <div class="box">
+			<h2>Contact Us</h2>
+			<p>If you wish to find out more please do not hesitate to contact us.
+			</p>
+			<i class="fa fa-location-dot"></i>
+			<label>1201 park street, Avenue, Melrose, Parkhurst. </label> <br>
+			<i class="fa fa-phone"></i>
+			<label>[88] 657 524 332</label> <br>
+			<i class="fa fa-envelope"></i>
+			<label>info@citilodge.com</label> <br>
+		  </div>
+		</div>
+	  </footer>
+	
+	  <div class="legal">
+		<p class="container">Copyright (c) 2023 #Codebreakers.</p>
+	  </div>
+	  
+	  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

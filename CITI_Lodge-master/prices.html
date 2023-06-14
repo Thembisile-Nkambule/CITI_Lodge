@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>
+    Citi_Lodge Pricing
+</title>
+<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+	  referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+	  crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<style>
+    	/* Layout */
+	body {
+		min-width: 600px;
+		background: white;
+	}
+
+	#container {
+		padding-left: 190px;
+		padding-right: 190px;
+	}
+		
+	#container .column {
+		position: relative;
+		float: left;
+	}
+		
+	#center {
+		padding: 10px 10px;
+		width: auto;
+	}
+		
+	#left {
+		width: 50px;
+		padding: 0 0px;
+		right: 100px;
+		margin-left: -80%;
+	}
+		
+	#right {
+		width: 50px;
+		padding: 0px 0px;
+        left: 100px;
+		margin-right: -80%;
+	}
+		
+	#footer {
+		clear: both;
+	}
+		
+		/* IE hack */
+	* html #left {
+		left: 150px;
+        right:150px;
+	}
+
+		/* Make the columns the same height as each other */
+	#container {
+		overflow: hidden;
+	}
+
+	#container .column {
+		padding-bottom: 1001em;
+		margin-bottom: -1000em;
+	}
+
+	/* Fix for the footer */
+	* html body {
+		overflow: hidden;
+	}
+		
+	* html #footer-wrapper {
+		float: left;
+		position: relative;
+		width: auto;
+		padding-bottom: auto;
+		margin-bottom: auto;
+		background: white;
+	}
+
+		/* Aesthetics */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family:Sans-serif;
+		line-height: 1.5em;
+	}
+		
+	p {
+		color: #555;
+	}
+
+	#header, #footer {
+		font-size: large;
+		padding: 0.3em;
+		background: rgb(213, 239, 255);
+	}
+
+	#left {
+		background: white;
+	}
+		
+	#right {
+		background: white;
+	}
+
+	#center {
+		background: white;
+	}
+
+	#container .column {
+		padding-top: 1em;
+	}
+
+    /* cards */
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+		
+    }
+    .card {
+        flex: 0 0 200px;
+        margin: 10px 5px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+		background: #EFFAFD;
+    } 
+    .card img {
+        max-width: 200px;
+		height: 150px;
+    }
+    .card .text {
+        padding: 0 20px 20px;
+    }
+
+    /* cards continued */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 20px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.zoom:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+@media (min-width: 568px) {
+    .name-item, .city-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .name-item input, .name-item div {
+        width: calc(50% - 20px);
+    }
+    .name-item div input {
+        width:97%;}
+    .name-item div label {
+        display:block;
+        padding-bottom:5px;
+    }
+}
+
+@media (max-width: 450px) {
+  		body {
+    		width: 100%;
+  		}
+  
+  		html, body {
+    		margin: 0;
+    		padding: 0;
+  		}
+	}
+/*--------header---------*/
+header {
+  height: 10vh;
+  line-height: 10vh;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+header img {
+  margin: 20px 0;
+}
+
+header ul {
+  display: inline-block;
+}
+
+header ul li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+header ul li a {
+  color: #000;
+  margin: 20px 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+header ul li a:hover {
+  color: lightgreen;
+}
+
+header i {
+  margin: 20px 20px;
+}
+
+header button {
+  padding: 0px 40px;
+}
+
+header .navbar span {
+  display: none;
+}
+
+@media only screen and (max-width:768px) {
+  header ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #009f7f;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    text-align: center;
+    z-index: 9;
+  }
+
+  header ul li {
+    display: block;
+  }
+
+  header ul li a {
+    color: white;
+  }
+
+  header i {
+    color: white;
+  }
+
+  header .navbar span {
+    color: black;
+    display: block;
+    cursor: pointer;
+    line-height: 10vh;
+    font-size: 25px;
+  }
+}
+/*--------header---------*/
+
+/*--------footer---------*/
+footer {
+  background: #282834;
+  color: #b6b7b9;
+  padding: 10% 0 5% 0;
+}
+
+footer .grid {
+  grid-template-columns: 6fr 3fr 3fr;
+}
+
+footer p {
+  color: #b6b7b9;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+footer .icon i {
+  margin: 20px 20px 20px 0;
+  color: #b6b7b9;
+}
+
+footer h2 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer li {
+  margin-bottom: 20px;
+}
+
+footer i {
+  color: #7fc142;
+  margin: 20px 0;
+  margin-right: 20px;
+}
+
+footer label {
+  margin: 20px 0;
+}
+
+.legal {
+  padding: 15px 0;
+  background: #282834;
+  color: #b6b7b9;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*--------footer---------*/
+@media only screen and (max-width:768px) {
+  .home {
+    color: #fff;
+    height: 50vh;
+  }
+
+  .home img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .book h1 {
+    margin-bottom: 20px;
+  }
+
+  .container.flex,
+  .book .flex_space {
+    flex-direction: column;
+  }
+
+  .book .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .counter .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .owl-carousel .owl-nav .owl-prev {
+    left: 80%;
+  }
+
+  .gallery .owl-nav .owl-prev {
+    left: 75%;
+  }
+
+  .rooms .owl-nav .owl-prev,
+  .rooms .owl-nav .owl-next {
+    top: -30%;
+  }
+
+  .gallery .owl-nav .owl-prev,
+  .gallery .owl-nav .owl-next {
+    top: -80%;
+  }
+
+  .services .flex_space {
+    flex-direction: column;
+  }
+
+  .Customer {
+    height: 60vh;
+  }
+
+  .Customer .container {
+    max-width: 80%;
+  }
+
+  .owl-carousel2 .owl-dots {
+    bottom: 0;
+    left: 44.5%;
+  }
+
+  footer .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+		/* Aesthetics */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family:Sans-serif;
+		line-height: 1.5em;
+	}
+		
+	p {
+		color: #555;
+	}
+
+	#header, #footer {
+		font-size: large;
+		/* padding: 0.3em; */
+	}
+
+	#left {
+		background: #fff;
+	}
+		
+	#right {
+		background: #fff;
+	}
+
+	#center {
+		background: #fff;
+	}
+
+	#container .column {
+		padding-top: 1em;
+	}
+    .right {
+        background-color: pink;
+        padding: 10px 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
+</head>
+<div class="logo">
+	<!-- <img src="images/Logo (2).png" alt="Citi_Lodge" width="150px" height="150px">
+        
+  </div>  -->
+  <header>
+    <div class="content flex_space">
+      <div class="logo" style="margin-top: -15px;">
+        <!-- <img src="images/logogo.jpeg" alt=""> -->
+		<img src="images/Logo (2).png" alt="Citi_Lodge" width="100px" height="100px">
+      </div>
+      <div class="navlinks">
+        <ul id="menulist">
+          <li> <a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+        </ul>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+      </div>
+    </div>
+  </header>
+<br><br>
+  <header>
+    <div class="content flex_space" style="background: #7fc142;">
+      <div class="navlinks">
+        <ul class="menulist">
+          <li><a href="home.html">home</a> </li>
+          <li><a href="contact.html">about us</a> </li>
+          <li><a href="faqs.html">faqs</a> </li>
+          <li><a href="branches.html">branches</a> </li>
+          <li><a href="services.html">services</a> </li>
+          <li><a href="careers.html">careers</a> </li>
+        </ul>
+        <span class="fa fa-bars" onclick="menutoggle()"></span>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    var menulist = document.getElementById('menulist');
+    menulist.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menulist.style.maxHeight == "0px") {
+        menulist.style.maxHeight = "100vh";
+      } else {
+        menulist.style.maxHeight = "0px";
+      }
+    }
+  </script>
+
+<div class="heading">
+    <div class="container">
+    <h1 style="margin-top: 16%;">Prices</h1>
+    <h2>PRICES</h2>
+    <p style="text-align:center">Find what you want all for an affordable price.</p>
+   </div>
+  </div>
+<body>
+    <br/>
+    <div id="container">
+<main class="cards">
+    <article class="card">
+      <div class="text">
+        <ul class="price">
+            <li>
+                <div class="zoom"><img class="pics" src="images/room1.jfif" alt="One bedroom chalet">
+                </div>
+            </li>
+            <li class="header">One bedroom chalet</li>
+            <li class="grey">R 850 / one week<br>Includes...</li>
+            <li>Room Service</li>
+            <li>Breakfast, Lunch and Dinner.</li>
+            <li>Laundry Service</li>
+            <li>Restuarant Access</li>
+            <li><a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+          </ul>
+      </div>
+    </article>
+    <article class="card">
+      <div class="text">
+        <ul class="price">
+            <li>
+                <div class="zoom"><img class="pics" src="images/suit.jfif" alt="Suite">
+                </div>
+            </li>
+            <li class="header" style="background-color:#04AA6D">Suite</li>
+            <li class="grey">R 1 700 / One week <br>Includes...</li>
+            <li>Room Service</li>
+            <li>Breakfast, Brunch, Lunch and Dinner.</li>
+            <li>Laundry Service</li>
+            <li>Restuarant & Pool Access</li>
+            <li><a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+          </ul>
+      </div>
+    </article>
+    <article class="card">
+      <div class="text">
+        <ul class="price">
+            <li>
+                <div class="zoom"><img class="pics" src="images/Exclusive.jfif" alt="Suite with private pool" height="180px">
+                </div>
+            </li>
+            <li class="header">Exclusive room with private pool</li>
+            <li class="grey">R 3 400 / One Week <br>Includes...</li>
+            <li>Room Service</li>
+            <li>Breakfast, Brunch, Lunch and Dinner with desert.</li>
+            <li>Laundry Service</li>
+            <li>Restuarant & Free Parking Access</li>
+            <li><a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+          </ul>
+      </div>
+    </article>
+    <article class="card">
+        <div class="text">
+            <ul class="price">
+              <li><div class="zoom">
+                <img class="pics" src="images/hall.jfif" alt="Conference Room & large Hall" height="180px">
+                  </div>
+              </li>
+              <li class="header" style="background-color:#04AA6D">Conference Room / Large Hall</li>
+              <li class="grey">R 10 000 / Whole day <br>Includes...</li>
+              <li>Catering</li>
+              <li>Venue decoration (Event dependent)</li>
+              <li>Music (optional)</li>
+              <li><a href="Booking.html"><button class="primary-btn">BOOK NOW</button> </a></li>
+            </ul>
+        </div>
+      </article>					
+</main>
+
+<!-- Left column (Left side of the website) -->
+        <div id="left" class="column">
+			
+        </div>
+
+<!-- right column (Right side of the website) -->
+        <div id="right" class="column">
+  
+        </div>
+    </div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container grid">
+		  <div class="box">
+			<h2>Citi Lodge</h2>
+			<p><h3>Logde Rules</h3>
+        <ul>
+          <li>Look at the stars</li>
+          <li>Make memories</li>
+          <li>Take long walks</li>
+          <li>Watch the sunrise</li>
+          <li>Relax and unwind</li>
+          <li>But most importantly rememebr to enjoy your stay.</li>
+        </ul>
+      </p>
+	
+			<div class="icon">
+			  <i class="fa fa-facebook-f"></i>
+			  <i class="fa fa-instagram"></i>
+			  <i class="fa fa-twitter"></i>
+			  <i class="fa fa-youtube"></i>
+			</div>
+		  </div>
+	
+		  <div class="box">
+			<h2>Links</h2>
+			<ul>
+			  <li>Company History</li>
+			  <li>About Us</li>
+			  <li>Contact Us</li>
+			  <li>Services</li>
+			  <li>Privacy Policy</li>
+			</ul>
+		  </div>
+	
+		  <div class="box">
+			<h2>Contact Us</h2>
+			<p>If you wish to find out more please do not hesitate to contact us.
+			</p>
+			<i class="fa fa-location-dot"></i>
+			<label>1201 park street, Avenue, Melrose, Parkhurst. </label> <br>
+			<i class="fa fa-phone"></i>
+			<label>[88] 657 524 332</label> <br>
+			<i class="fa fa-envelope"></i>
+			<label>info@citilodge.com</label> <br>
+		  </div>
+		</div>
+	  </footer>
+	
+	  <div class="legal">
+		<p class="container">Copyright (c) 2023 #Codebreakers.</p>
+	  </div>
+	  
+	  <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
